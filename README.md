@@ -1,0 +1,1 @@
+This is a Django backend application to manage a customer subscription platform
