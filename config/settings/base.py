@@ -19,9 +19,9 @@ INSTALLED_APPS = [
     # Third party
     "rest_framework",
 
-    # Your apps
-    # "apps.users",
-    # "apps.core",
+    # apps
+    "apps.core",
+    "apps.base",
 ]
 
 MIDDLEWARE = [
@@ -33,6 +33,16 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticated",
+    ),
+}
 
 ROOT_URLCONF = "config.urls"
 
