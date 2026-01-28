@@ -1,0 +1,28 @@
+**************************************************************************
+
+Bash
+
+python manage.py showmigrations
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+
+**************************************************************************
+
+Docker
+
+docker ps
+docker compose -f docker-compose.local.yml up -d --build
+docker compose up -d
+docker compose down
+docker system prune -a -f
+docker volume prune -a -f
+docker exec -it customersubscription-web-1 bash
+docker exec -it customersubscription-db-1 psql -U django_user -d django_db
+
+**************************************************************************
+
+Git/Github
+
+git status
+git push --set-upstream origin <branch-name>
