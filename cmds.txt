@@ -19,6 +19,7 @@ docker system prune -a -f
 docker volume prune -a -f
 docker exec -it customersubscription-web-1 bash
 docker exec -it customersubscription-db-1 psql -U django_user -d django_db
+docker compose logs web --tail=50
 
 **************************************************************************
 

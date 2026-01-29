@@ -10,8 +10,8 @@ from .enum_schemas import (
 class Customer(TimeStamped):
     first_name = models.CharField(max_length=30, blank=False)
     last_name = models.CharField(max_length=30, blank=False)
-    email = models.EmailField(blank=False)
-    phone_number = models.CharField(max_length=15, blank=True)
+    email = models.EmailField(blank=False, unique=True)
+    phone_number = models.CharField(max_length=15, blank=True, null=True, unique=True)
     status = models.CharField(max_length=10, choices=customer_status, default='active')
 
 class Service(TimeStamped):
